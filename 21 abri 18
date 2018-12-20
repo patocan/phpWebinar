@@ -1,0 +1,58 @@
+<?php
+class html
+{
+  public function cabeza($titulo='sin nombre',$javascript='')
+  {
+    echo "<!DOCTYPE html><html><head>";
+    echo "<title>$titulo</title>";
+    echo $javascript;
+    //todo conteni head
+    echo "</head>";
+  }
+  public function abrirCuerpo()
+  {
+    echo "<body>";
+  }
+  public function cerrarCuerpo()
+  {
+    echo "</body>";
+  }
+  public function pie()
+  {
+    echo "</html>";
+  }
+}
+ class Miclase
+ {
+   private $nombreObjeto='objeto vacio ';
+   public function _construct()
+   {
+     //echo "se creo el objeto;
+   }
+   public function modificarNombre($nuevoNombre)
+   {
+     echo "El nombre anterior es: " .$this->nombreObjeto;
+     $this->nombreObjeto=$nuevoNombre;
+     echo"El nuevo nombre es:".$this->regresarNombre()."<br />";
+   }
+   public function regresarNombre()
+   {
+     return $this->nombreObjeto;
+   }
+ }   
+// Termina mis Clases
+$js='<script type="text/javascript"> alert("Hola desde JS");</script>';
+$objetohtml=new html();
+$objetohtml->cabeza("prpnuer home",$js);
+$objetohtml->abrirCuerpo();
+
+$miObjeto1=new Miclase();
+$miObjeto2=new Miclase();
+$miObjeto3=new Miclase();
+
+$miObjeto1->modificarNombre("Objeto uno");
+$miObjeto2->modificarNombre("Objeto dos");
+$miObjeto3->modificarNombre("Objeto tres");
+
+$objetohtml->cerrarCuerpo();
+$objetohtml->pie();
