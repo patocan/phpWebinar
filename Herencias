@@ -1,0 +1,32 @@
+<?php
+
+class Servivo
+{
+  public function respirar()
+  {
+  echo "Estoy respirando";
+    $this->miMetodo();
+  }
+  private function miMetodo()
+  {
+    echo "<br> Solo desde la clase";
+  }
+}
+
+class Serhumano extends servivo
+ {
+  public function razonar()
+  {
+    echo "Yo estoy razonando";
+  }
+}
+
+//$Objetoservivo =new servivo();
+//$Objetoservivo->respirar();
+//echo "<br>";
+$objetoserhumano=new Serhumano();
+//$objetoserhumano->razonar();
+//echo "<br>";
+$objetoserhumano->respirar();
+
+
