@@ -1,0 +1,36 @@
+
+
+
+<?php
+
+class OperacionesArtimeticas
+{
+  public function arreglo()
+  {
+   $arreglo = array("valor 1","valor 2","valor 3","valor 4");
+   // echo $arreglo[3];
+   $arreglo2 = array(1=>"Pos1",2=>"pos2",0=>"Pox x");
+    //echo $arreglo2[0];
+   $arreglo3[0]="pos cero";
+   $arreglo3[4]="pos cuatro";
+   // echo $arreglo3[4];
+    $arreglo4=array("pos1"=>"Claudio","pos2"=>"Mario","pos3"=>"Maria");
+    echo $arreglo4["pos1"];
+  }
+  
+  public function suma($datosR)
+  {
+    $resultado=$datosR[0]+$datosR[1]+$datosR[2]+$datosR[3];
+      return $resultado;
+  }
+  
+  public function resta($uno,$dos,$tres,$cuatro,$cinco)
+  {
+    $resultado=$uno+$dos+$tres+$cuatro+$cinco;
+    return $resultado;
+  }
+}
+$datos=array(1,2,3,4);
+$objetooperacions= new OperacionesArtimeticas();
+$objetooperacions->arreglo();
+//echo "El Resulta es: ".$objetooperacions->suma($datos);
