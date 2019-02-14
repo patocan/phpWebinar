@@ -15,7 +15,7 @@ class OperacionesArtimeticas
    $arreglo3[4]="pos cuatro";
    // echo $arreglo3[4];
     $arreglo4=array("pos1"=>"Claudio","pos2"=>"Mario","pos3"=>"Maria");
-    echo $arreglo4["pos1"];
+    echo $arreglo4["pos3"];
   }
   
   public function suma($datosR)
@@ -24,13 +24,19 @@ class OperacionesArtimeticas
       return $resultado;
   }
   
-  public function resta($uno,$dos,$tres,$cuatro,$cinco)
+  public function resta($datosR)
   {
-    $resultado=$uno+$dos+$tres+$cuatro+$cinco;
+    $resultado=$datosR[0] - $datosR[1] - $datosR[2] - $datosR[3];
+    return $resultado;
+  }
+  
+  public function multipli($datosR)
+  {
+    $resultado=$datosR[0] * $datosR[1] * $datosR[2] * $datosR[3];
     return $resultado;
   }
 }
 $datos=array(1,2,3,4);
 $objetooperacions= new OperacionesArtimeticas();
-$objetooperacions->arreglo();
-//echo "El Resulta es: ".$objetooperacions->suma($datos);
+//$objetooperacions->arreglo();
+echo "El Resulta es: ".$objetooperacions->multipli($datos);
