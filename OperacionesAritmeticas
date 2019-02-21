@@ -30,3 +30,4 @@ class OperacionesArtimeticas
 $datos=array(1,2,3,4);
 $objetooperacions= new OperacionesArtimeticas();
 //$objetooperacions->arreglo();
+echo "El Resulta es: ".$objetooperacions->operaciones($datos,"resta");
