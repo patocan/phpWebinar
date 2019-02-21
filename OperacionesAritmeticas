@@ -1,0 +1,32 @@
+
+
+
+<?php
+
+class OperacionesArtimeticas
+{
+   public function operaciones($datosR, $operacion="suma")
+  {
+     if ($operacion=="suma")
+     {
+       $resultado=$datosR[0]+$datosR[1]+$datosR[2]+$datosR[3]; 
+     }
+   else if ($operacion=="resta")
+   {
+    $resultado=$datosR[0] - $datosR[1] - $datosR[2] - $datosR[3]; 
+   }
+   else if ($operacion=="multiplica")
+   {
+     $resultado=$datosR[0] * $datosR[1] * $datosR[2] * $datosR[3];
+   }
+   else 
+   {
+     return $resultado="Operacion no dfinida";
+   }
+      return $resultado;
+  }
+ }
+
+$datos=array(1,2,3,4);
+$objetooperacions= new OperacionesArtimeticas();
+//$objetooperacions->arreglo();
